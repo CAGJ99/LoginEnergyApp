@@ -1,0 +1,47 @@
+<div class="login-container">
+    <div class="icon">
+        <i class="far fa-user fa-4x"></i>
+    </div>
+    <div class="form">
+        <form class="login-form" [formGroup]="formLogin" (ngSubmit)="onLogin()">
+            <div class="input-form">
+                <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="far fa-user"></i>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" id="inlineFormInputGroupUsername" formControlName ="username" placeholder="Usuario">
+                </div>
+              </div>
+              <p class="notification init-animation" *ngIf="formLogin.get('username')?.touched && formLogin.get('username')?.invalid"><strong>Ingrese usuario</strong></p>
+              <div class="input-form">
+                <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fas fa-key"></i>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" id="inlineFormInputGroupUsername" formControlName ="password" placeholder="Contraseña">
+                </div>
+              </div>
+              <p class="notification init-animation" *ngIf="formLogin.get('password')?.touched && formLogin.get('password')?.invalid"><strong>Ingrese contraseña</strong></p>
+            <div class="form-row">
+              <div class="col-auto my-1">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                  <label class="form-check-label" for="autoSizingCheck2">
+                     Recuerdame
+                  </label>
+                </div>
+              </div>
+              
+              <div class="submit-form col-auto my-1">
+                <button type="submit" class="btn btn-dark">Ingresar</button>
+              </div>
+            </div>
+          </form>
+    </div>
+</div>

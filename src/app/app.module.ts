@@ -18,6 +18,7 @@ registerLocaleData(localES, 'es')
   ],
   
   imports: [
+   
     BrowserModule,
     AppRoutingModule,
     SharedModule,

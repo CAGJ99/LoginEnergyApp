@@ -97,3 +97,19 @@ ul>li {
         }
     }
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.init-animation {
+    animation: .3s fadeIn;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}

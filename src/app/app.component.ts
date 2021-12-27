@@ -16,11 +16,13 @@ export class AppComponent {
   navLinks: INavLinks[];
   activeLinkIndex: number;
   loader:boolean;
+  isLogged:boolean;
 
   constructor(
     private router:Router,
     private mainFactory : MainFactoryService
     ) {
+    this.isLogged = false;
     this.activeLinkIndex = -1; 
     this.title = 'energyApp';
     this.activeTab = 'dashboard';
