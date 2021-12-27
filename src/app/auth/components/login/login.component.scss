@@ -4,11 +4,12 @@
         margin: auto;
         text-align: center;
         border-radius: 60%;
-        border: 3px solid #212529;
+        border: 3px solid #01579B;
         height: 90px;
        }
        i{
         margin-top: 7px;
+        color: #01579B;
        }
 
     .login-form{   
@@ -24,6 +25,9 @@
            padding-top: 2rem;
            button{
             width: 99%;
+            background-color:  #CACAFF;
+            border:  #CACAFF;
+            color:#01579B;
            }
         }
     }
