@@ -1,0 +1,14 @@
+<div class="call-center-filter">
+    <div class="search-form">
+        <div class="commune-search">
+            <p> <strong>Comuna</strong> </p>
+            <ng-select [items]="commune" bindLabel="nom_comuna" [clearable]="false" (change)="onValueChange($event)" placeholder="Seleccione distribuidor">
+            </ng-select>
+        </div>
+        <div class="region-search">
+            <p><strong>Región</strong></p>
+            <!-- <ng-select [items]="listDistribuitors" bindLabel="name" [clearable]="false" (change)="onValueChange($event)" placeholder="Seleccione distribuidor">
+        </ng-select> -->
+        </div>
+    </div>
+</div>

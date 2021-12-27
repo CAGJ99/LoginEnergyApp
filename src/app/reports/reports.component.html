@@ -1,0 +1,23 @@
+<div class="home" *ngIf="!loadingReports">
+    <div class="reports">
+        <div class="tittle">
+            <h2>
+                <i class="fas fa-file-alt"></i> Reporte del sector energético
+            </h2>
+        </div>
+        <div class="reports-filter">
+            <app-form-reports (handleSearchReports)="onHandleSearchReports($event)"></app-form-reports>
+            <hr class="separator">
+            <div class="content-reports">
+                <div class="center">
+                    <p class="color-blue-dark4" *ngIf="reportList.length && reportList.length > 0 && !loader"><strong>Reportes correspondientes a la fecha: {{showDate}}</strong></p>
+                    <div class="alert alert-primary" role="alert" *ngIf="!reportList.length && reportList.length === 0 && !loader">
+                        No se registran reportes para la fecha: <strong>{{showDate}}</strong>
+                    </div>
+                    <ngx-skeleton-loader count="5" *ngIf="loader"></ngx-skeleton-loader>
+                    <app-reports-table [reportsList]="reportList" *ngIf="reportList.length && reportList.length > 0 && !loader"></app-reports-table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

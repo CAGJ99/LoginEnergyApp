@@ -1,0 +1,11 @@
+<carousel [isAnimated]="true" class="carousel-container">
+    <slide *ngFor="let item of imageList">
+        <div class="text-center bg-white text-black content-carousel">
+            <img [src]="item.linkImage" [alt]="item.alt">
+            <div class="legend color-grey12">
+                <h3>{{item.title}}</h3>
+                <p>{{item.description}}.</p>
+            </div>
+        </div>
+    </slide>
+</carousel>

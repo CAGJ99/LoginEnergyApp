@@ -1,0 +1,8 @@
+<div class="main" *ngIf="!loader">
+    <app-navbar></app-navbar>
+    <div class="col-12">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<app-loader *ngIf="loader"></app-loader>

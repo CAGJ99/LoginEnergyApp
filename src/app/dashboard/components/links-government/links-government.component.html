@@ -1,0 +1,8 @@
+<div class="link-government">
+    <div class="link-container">
+        <a [href]="item.link" *ngFor="let item of listLinks" target="blank">
+            <div class="link" [style.background-image]="'url(' + item.style + ')'">
+            </div>
+        </a>
+    </div>
+</div>

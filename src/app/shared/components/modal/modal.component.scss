@@ -1,0 +1,11 @@
+.modal-header {
+    color: #717171;
+    &.warning {
+        background-color: yellow;
+        color: white;
+    }
+}
+
+.modal-footer {
+    background-color: #efefef;
+}

@@ -1,0 +1,99 @@
+@import "colors.scss";
+body {
+    background-color: #f8f9fa;
+    font-family: "gobCL", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.table {
+    thead {
+        &.theme-secundary {
+            background-color: $color-grey4;
+            color: $color-white;
+            th {
+                border: none !important;
+            }
+        }
+        tr>th {
+            text-align: center;
+            vertical-align: middle;
+            border-top: none !important;
+            border-bottom-color: #dddddd !important;
+            border-bottom-width: 2px;
+        }
+    }
+    tbody {
+        tr>td {
+            vertical-align: middle;
+            color: black;
+            border-top: none !important;
+            &.no-padding {
+                padding: 0 !important;
+            }
+            &.tdtext {
+                text-align: left;
+            }
+            &.tdnumber {
+                text-align: right;
+            }
+            &.tddate,
+            &.tdbutton,
+            &.tdicon,
+            &.tdsimbol {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.carousel {
+    .slide {
+        border: 2px solid #c8c9ca;
+        .content-carousel {
+            img {
+                width: 100%;
+            }
+            .legend {
+                padding: 1rem;
+                border-top: 1px solid #c8c9ca;
+                text-align: left;
+            }
+        }
+        .carousel-indicators {
+            margin-bottom: 0rem !important;
+            [data-bs-target] {
+                background-color: #02589b !important;
+            }
+        }
+    }
+}
+
+.color-blue-dark4 {
+    color: $color-blue-dark4;
+}
+
+.color-grey11 {
+    color: $color-grey11;
+}
+
+.color-grey12 {
+    color: $color-gery12;
+}
+
+.color-dark-blue {
+    border: 1px solid $color-blue-dark5 !important;
+    background-color: #cacaff !important;
+    color: #01579b !important;
+    font-weight: bold !important;
+}
+
+ul>li {
+    border-top: 4px solid #05668c;
+    &:not(.active) {
+        background-color: rgb(142, 142, 146);
+        border-color: rgb(56, 56, 58);
+        a {
+            color: rgb(56, 56, 58);
+            font-weight: bold;
+        }
+    }
+}

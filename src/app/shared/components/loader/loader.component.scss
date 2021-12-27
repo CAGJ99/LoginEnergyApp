@@ -1,0 +1,61 @@
+.loader {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #eaeaeaea;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: -moz-radial-gradient(center, ellipse cover, white 0%, #6c757d 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, white 0%, #6c757d 100%);
+    background: radial-gradient(ellipse at center, white 0%, #6c757d 100%);
+    opacity: 0.8;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .spinner {
+        width: 90px;
+        height: 40px;
+        background-image: url('../../../../assets/images/LogoCNE.png');
+        background-size: cover;
+        background-color: transparent;
+        // margin: 100px auto;
+        -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+        animation: sk-rotateplane 1.2s infinite ease-in-out;
+    }
+    .message {
+        background: transparent;
+    }
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}

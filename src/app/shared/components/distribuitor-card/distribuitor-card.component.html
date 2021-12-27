@@ -1,0 +1,24 @@
+<div class="call-center-table">
+    <div class="header">
+        <div class="cards-content" *ngFor="let item of companyList">
+            <ngx-skeleton-loader count="5" *ngIf="loading"></ngx-skeleton-loader>
+            <div class="card-body">
+                <div class="card-img">
+                    <ngx-skeleton-loader *ngIf="loading" appearance="circle" count="1" animation="progress-dark" [theme]="{'width': '150px', 'height': '150px', 'margin': '0'}">
+                    </ngx-skeleton-loader>
+                    <img *ngIf="!loading" appErrorSrcImg type='company' [src]="item.logo_horizontal_svg | noImage: 'company'" alt="">
+                </div>
+                <div class="enterprise-data">
+                    <p><strong>Nombre: {{item.nombre_empresa}}</strong></p>
+                    <p><strong>Dirección: {{item.direccion_empresa}}</strong></p>
+                    <p><strong>Fono: {{item.fono_empresa}}</strong></p>
+                    <div class="options">
+                        <button type="button" class="btn btn-primary color-dark-blue" (click)="onShowModal()">
+                            <i class="fas fa-headphones"></i>
+                            Call Center
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,60 @@
+<div class="dashboard">
+    <div class="row">
+        <div class="col-12">
+            <div class="tm-main-bg">
+                <div class="carousel">
+                    <app-carousel [imageList]="carouselImageList"></app-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="main">
+        <section class="tm-welcome mt-4">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="tm-section-header tm-section-header-small">
+                        <i class="fas fa-info-circle"></i> Informaciones
+                    </h2>
+                </div>
+            </div>
+            <div class="row tm-welcome-row-2 mt-4">
+                <div class="service-card" *ngFor="let item of listOptions">
+                    <div class="header">
+                        {{item.name}}
+                    </div>
+                    <div class="service-icon">
+                        <a [routerLink]="item.link">
+                            <i [class]="item.icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row tm-welcome-row">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-section-header tm-section-header-small">
+                            <i class="fas fa-truck"></i> Distribuidoras
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="cards" *ngFor="let item of listDistributors">
+                    <a [href]="item.img?.webPage" target="blank">
+                        <img [src]="item.img?.img" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="tm-featured pt-4">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="tm-section-header tm-section-header-small">
+                        <i class="fas fa-link"></i> Otros intereses
+                    </h2>
+                </div>
+            </div>
+            <app-links-government [listLinks]="linkGovermentList"></app-links-government>
+        </section>
+    </main>
+</div>

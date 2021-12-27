@@ -1,0 +1,35 @@
+<div class="reports-table">
+    <div class="responsive-table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sector</th>
+                    <th>Región</th>
+                    <th>Indicador</th>
+                    <th>Unidad/Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of returnedArray">
+                    <td class="tdtext">
+                        <p>{{item.Sector}}</p>
+                    </td>
+
+                    <td class="tdtext">
+                        <p>{{item.Region}}</p>
+                    </td>
+
+                    <td class="tdtext">
+                        <p>{{item.Indicador}}</p>
+                    </td>
+                    <td class="tdtext">
+                        <p>{{item.Unidad}} {{item.Valor}}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagination-table-reports">
+            <pagination [totalItems]="reportsList.length" (pageChanged)="pageChanged($event)" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+        </div>
+    </div>
+</div>

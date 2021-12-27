@@ -1,0 +1,42 @@
+<div class="call-center-table">
+
+    <div class="responsive-table">
+        <table class="table theme-secundar">
+            <thead class="theme-secundary">
+                <tr>
+                    <th>Región</th>
+                    <th>Comuna</th>
+                    <th>Precio</th>
+                    <th>Tipo de gas</th>
+                    <th>Ubicación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of returnedArray">
+                    <td class="tdtext">
+                        <p>{{item.nombre_region}}</p>
+                    </td>
+
+                    <td class="tdtext">
+                        <p>{{item.nombre_comuna}}</p>
+                    </td>
+
+                    <td class="tdtext">
+                        <p>{{item.precio}}</p>
+                    </td>
+                    <td class="tdtext">
+                        <p>{{item.tipo_gas}}</p>
+                    </td>
+                    <td class="tdbutton">
+                        <button type="button" class="btn btn-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagination-table-reports">
+            <pagination [totalItems]="callCenterList.length" [maxSize]="5" (pageChanged)="pageChanged($event)" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+        </div>
+    </div>
+</div>

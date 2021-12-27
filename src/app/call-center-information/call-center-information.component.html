@@ -1,0 +1,38 @@
+<div class="call-center-information">
+    <div class="tittle">
+        <h2>
+            <i class="fas fa-headset"></i> Call center venta GLP
+        </h2>
+    </div>
+    <div class="reports-filter">
+        <app-call-center-filter></app-call-center-filter>
+        <p><strong>Distribuidores</strong></p>
+        <ng-select [items]="listDistribuitors" bindLabel="name" [clearable]="false" (change)="onValueChange($event)" placeholder="Seleccione distribuidor">
+        </ng-select>
+        <hr class="separator">
+        <div class="content-reports">
+            <div class="center">
+                <app-distribuitor-card [companyList]="companyList" [loading]="loadingListDistribuitors" (handleShowModal)="onHandleShowModal($event, modalCallCenter)"></app-distribuitor-card>
+                <!-- <app-call-center-filter [commune]="communeList" [callCenterList]=" callCenterList"></app-call-center-filter> -->
+                <div class="alert alert-primary" role="alert" *ngIf="initialCharge">
+                    <i class="fas fa-info-circle"></i> Seleccione algun distribuidor
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #modalCallCenter>
+    <app-modal icon="fas fa-phone-square-alt" [title]="'Lista Call Center'" [actionDefault]="'Cerrar'" [nivel]="1">
+        <app-call-center-table [callCenterList]=" callCenterList"></app-call-center-table>
+        <button class="btn btn-primary" (click)="onOpenSecondModal(mapsModal)"> open second modal</button>
+    </app-modal>
+
+</ng-template>
+
+<ng-template #mapsModal>
+    <app-modal icon="fas fa-home" [title]="'second modal'" [actionDefault]="'Cerrar'" [nivel]="2">
+        <h1> Content Modal</h1>
+    </app-modal>
+</ng-template>

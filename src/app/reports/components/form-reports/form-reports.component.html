@@ -1,0 +1,17 @@
+<div class="form-reports">
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmitForm()">
+        <div class="form-option">
+            <div class="label-form">
+                <strong>Fecha de reportes</strong>
+            </div>
+            <div class="input-group">
+                <input type="text" bsDatepicker formControlName="dateFilter" [bsConfig]="{ isAnimated: true, dateInputFormat: 'DD-MM-YYYY', showWeekNumbers: false, containerClass: 'theme-dark-blue' }" class="form-control" [bsValue]="dateFilter">
+                <i class="icon far fa-calendar"></i>
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>

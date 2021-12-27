@@ -1,0 +1,17 @@
+.form-reports {
+    .form-option {
+        display: flex;
+        flex-direction: column;
+        .input-group {
+            width: 25%;
+            align-items: center;
+            .icon {
+                position: relative;
+                margin-left: -1.5rem;
+            }
+            .button-container {
+                margin-left: 2rem;
+            }
+        }
+    }
+}

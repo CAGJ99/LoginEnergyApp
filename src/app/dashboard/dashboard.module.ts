@@ -1,0 +1,24 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { DashboardRoutingModule } from './dashboard-routing.module';
+import { DashboardComponent } from './dashboard.component';
+import { LinksGovernmentComponent } from './components/links-government/links-government.component';
+import { SharedModule } from '../shared/shared.module';
+
+
+@NgModule({
+  declarations: [
+    DashboardComponent,
+    LinksGovernmentComponent,
+  ],
+  imports: [
+    CommonModule,
+    DashboardRoutingModule,
+    SharedModule
+  ],
+  exports:[
+    DashboardComponent
+  ]
+})
+export class DashboardModule { }

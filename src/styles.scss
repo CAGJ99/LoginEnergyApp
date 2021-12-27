@@ -1,0 +1,13 @@
+@use "sass:list";
+@use "sass:map";
+@import "assets/scss/main";
+@import "assets/scss/colors";
+
+/* Importing Bootstrap SCSS file. */
+
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
+@import "~@ng-select/ng-select/themes/default.theme.css";
