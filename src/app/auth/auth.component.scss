@@ -9,3 +9,9 @@
        box-shadow: -9px 3px 6px rgb(0 0 0 / 30%);
    }
 }
+
+@media (max-width: 1000px){
+    .box{
+        width: 100% !important;
+    }
+}
