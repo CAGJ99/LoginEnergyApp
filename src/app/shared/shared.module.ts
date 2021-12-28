@@ -16,6 +16,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { DistribuitorCardComponent } from './components/distribuitor-card/distribuitor-card.component';
 import { CoreModule } from '../core/core.module';
 
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 

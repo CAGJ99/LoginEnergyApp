@@ -1,0 +1,74 @@
+.auth-container {
+    max-height: 2000px;
+    margin-top: 3rem;
+    .box {
+        width: 33%;
+        margin: auto;
+        background-color: #F8F9FA;
+        border-radius: 10px;
+        box-shadow: -9px 3px 6px rgb(0 0 0 / 30%);
+        .login-container {
+            .icon {
+                width: 22%;
+                margin: auto;
+                text-align: center;
+                border-radius: 60%;
+                border: 3px solid #01579B;
+                height: 90px;
+            }
+            i {
+                margin-top: 7px;
+                color: #01579B;
+            }
+            .icon-main {
+                margin-top: 18px;
+                margin-left: 13px;
+            }
+            .login-form {
+                padding: 3rem;
+                .input-form {
+                    padding-top: 0.3rem;
+                }
+                .form-row {
+                    .submit-form {
+                        text-align: center;
+                        padding-top: 1rem;
+                        button {
+                            width: 99%;
+                            background-color: #CACAFF;
+                            border: #CACAFF;
+                            color: #01579B;
+                        }
+                    }
+                }
+                .notification {
+                    color: red;
+                    font-size: 10px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+@media (width: 280px) {
+    .icon {
+        border: 0px !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .box {
+        width: 100% !important;
+    }
+}
+
+@media (width: 1024px) {
+    .box {
+        width: 43% !important;
+    }
+}
+
+.validators {
+    height: 16px;
+}

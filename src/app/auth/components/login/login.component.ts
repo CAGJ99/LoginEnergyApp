@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   formLogin: FormGroup;
   constructor(
     private formbuilder: FormBuilder,
@@ -16,8 +16,6 @@ export class LoginComponent implements OnInit {
     this.buildForm()
   }
 
-  ngOnInit(): void {
-  }
 
   private buildForm(){
     this.formLogin = this.formbuilder.group({
@@ -33,5 +31,9 @@ export class LoginComponent implements OnInit {
   public goToDashboard(){
     this.router.navigate(['/dashboard']);
 
+  }
+
+  public onGoToRegisterPage(){
+    this.router.navigate(['auth/register']);
   }
 }

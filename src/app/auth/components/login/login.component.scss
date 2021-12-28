@@ -1,46 +1,58 @@
-.login-container{
-    .icon{
+.login-container {
+    .icon {
         width: 22%;
         margin: auto;
         text-align: center;
         border-radius: 60%;
         border: 3px solid #01579B;
         height: 90px;
-       }
-       i{
+    }
+    i {
         margin-top: 7px;
         color: #01579B;
-       }
-
-    .login-form{   
+    }
+    .login-form {
         padding: 3rem;
-        .input-form{
-            &:nth-child(2){
-                padding-top:1.9rem;
+        .input-form {
+            &:nth-child(2) {
+                padding-top: 1.9rem;
             }
         }
-    .form-row{
-        .submit-form{
-           text-align: center;
-           padding-top: 2rem;
-           button{
-            width: 99%;
-            background-color:  #CACAFF;
-            border:  #CACAFF;
-            color:#01579B;
-           }
+        .form-row {
+            .submit-form {
+                text-align: center;
+                padding-top: 2rem;
+                button {
+                    width: 99%;
+                }
+                &:nth-child(2) {
+                    button {
+                        background-color: #CACAFF;
+                        border: #CACAFF;
+                        color: #01579B;
+                    }
+                }
+                &:nth-child(3) {
+                    button {
+                        background-color: #01579B;
+                        border: #01579B;
+                        color: white;
+                        i {
+                            color: white !important;
+                        }
+                    }
+                }
+            }
+        }
+        .notification {
+            color: red;
+            font-size: 10px;
         }
     }
-    .notification{
-        color: red;
-        font-size: 10px;
-    }
-  }
-
 }
 
-@media (width: 280px){
-    .icon{
+@media (width: 280px) {
+    .icon {
         border: 0px !important;
-       }
+    }
 }

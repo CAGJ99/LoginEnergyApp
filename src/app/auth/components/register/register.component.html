@@ -1,1 +1,71 @@
-<p>register works!</p>
+<div class="auth-container">
+    <div class="box">
+        <div class="login-container">
+            <div class="icon">
+                <i class="fas fa-user-plus fa-3x icon-main"></i>
+            </div>
+            <div class="form">
+                <form class="login-form" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                    <div class="input-form">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="far fa-user"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" formControlName="username" placeholder="Nombre usuario">
+                        </div>
+                    </div>
+                    <div class="validators">
+                        <p class="notification init-animation" *ngIf="registerForm.get('username')?.touched && registerForm.get('username')?.invalid">Ingrese nombre usuario</p>
+                    </div>
+                    <div class="input-form">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" formControlName="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="validators">
+                        <p class="notification init-animation" *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">Email invalido</p>
+                    </div>
+                    <div class="input-form">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                            </div>
+                            <input type="password" class="form-control" formControlName="password" placeholder="Contraseña">
+                        </div>
+                    </div>
+                    <div class="validators">
+                        <p class="notification init-animation" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">Ingrese password</p>
+                    </div>
+                    <div class="input-form">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                            </div>
+                            <input type="password" class="form-control" formControlName="validatePassword" placeholder="Repita contraseña">
+                        </div>
+                    </div>
+                    <div class="validators">
+                        <p class="notification init-animation" *ngIf="registerForm.get('validatePassword')?.touched && registerForm.get('validatePassword')?.invalid">Ingrese password nuevamente</p>
+                    </div>
+                    <div class="form-row">
+                        <div class="submit-form col-auto my-1">
+                            <button type="submit" class="btn"> Registrarse</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
